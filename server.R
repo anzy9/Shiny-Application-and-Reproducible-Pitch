@@ -31,7 +31,7 @@ shinyServer(function(input, output) {
       simMeans = c(simMeans, mean(rexp(samples,lambda)))
     }
     
-    hist(simMeans, prob=TRUE, col="gray", main="Distribution", breaks=40, xlim=c(2,8), xlab = "Simulation Means of 40 samples")
+    hist(simMeans, prob=TRUE, col="gray", main="Distribution", breaks=40, xlim=c(2,8), xlab = "Simulation Means")
     lines(density(simMeans), lwd=3, col="red")
   })
 })

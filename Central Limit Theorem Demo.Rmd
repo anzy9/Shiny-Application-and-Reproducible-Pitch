@@ -17,7 +17,7 @@ We will simulate the exponential distribution and investigate whether it follows
 
       
 
-## Control Parameters
+## Control Parameters and Sample Code
 There are three control Parameters
 
 - lamba
@@ -27,9 +27,6 @@ There are three control Parameters
 - Simulation count
 
 Lamba is the rate parameter and will be set to 0.2, Sample Size and Simulation will be inputed by the user
-
-## Sample Code
-
 ```{r, echo = TRUE,eval=TRUE,results='hide'}
 lambda <- 0.2;
 samples <- 40;
@@ -40,15 +37,15 @@ for (i in 1 : simulationCount) {
 }
 ```
 
-## Slide with Plot
-
+## Distribution Plot
+Plot for Sample size=40 and Simulation=1000
 ```{r}
-hist(simMeans, prob=TRUE, col="gray", main="Distribution",breaks=40, xlim=c(2,8), xlab = "Simulation Means of 40 samples")
+hist(simMeans, prob=TRUE, col="gray", main="Distribution",breaks=40, xlim=c(2,8), xlab = "Simulation Means")
 lines(density(simMeans), lwd=3, col="red")
 ```
 
 ## Usage guidelines
 1) App can be accessed from https://anjy9.shinyapps.io/CentralLimitTheoremDemo/
-2) Github link
+2) Github link https://github.com/anzy9/Shiny-Application-and-Reproducible-Pitch
 3) Increase the sample size to 50 and above the distribution follows CLT(red line)
 4) Simulation count is for increasing the simulations
